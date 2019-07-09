@@ -132,7 +132,12 @@ print_modname() {
 on_install() {
   # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
   # Extend/change the logic to whatever you want
-  ui_print "- Extracting module files"
+  ui_print " - Extracting module files"
+  ui_print " - Extracting MIUI Camera"
+  ui_print " - Extracting dual speakerMOD"
+  ui_print " - Extracting Pixel Theme"
+  ui_print " - Extracting Pixel sounds"
+  ui_print " - Extracting Pixel bootanimation"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 }
 
