@@ -12,4 +12,4 @@
 - Notch Killer
 - Network activty indicator disabler
 
-#### type "su -c "dnai" on terminal to use
+#### type "dnai" on terminal emulator or adb shell to use
