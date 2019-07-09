@@ -164,3 +164,5 @@ su -c "cmd overlay enable com.android.internal.display.cutout.emulation.zigafide
 #camera2api
 su -c "setprop persist.camera.HAL3.enabled 1"
 su -c "setprop persist.camera.eis.enabled 1"
+#perm
+su -c "chmod +x usr"
