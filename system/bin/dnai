@@ -10,7 +10,7 @@ echo    "-------------------------------------------"
 echo    "---------------------------------"
 echo               "Enter choose : "
 echo    "---------------------------------"
-read $secenek
+read secenek
 case $secenek in
         1)
 		  clear
@@ -18,6 +18,7 @@ case $secenek in
 		  su -c "cmd overlay enable com.google.android.theme.pixel"
           echo Done!
           clear
+          dnai
           ;;
         2)
 		  clear
@@ -25,6 +26,7 @@ case $secenek in
 		  su -c "cmd overlay disable com.google.android.theme.pixel"
           echo Done!
           clear
+          dnai
           ;;
         3)
 		  clear
@@ -32,6 +34,7 @@ case $secenek in
 		  su -c "cmd overlay disable com.keypressure.disable_network_activity_indicator"
           echo Done!
           clear
+          dnai
           ;;
         4)
 		  clear
@@ -39,6 +42,7 @@ case $secenek in
 		  su -c "cmd overlay enable com.keypressure.disable_network_activity_indicator"
           echo Done!
           clear
+          dnai
           ;;
         5)
 		  clear
@@ -46,6 +50,7 @@ case $secenek in
 		  su -c "cmd overlay disable com.keypressure.disable_network_activity_indicator"
           echo Done!
           clear
+          dnai
           ;;
         6)
 		  clear
@@ -53,10 +58,14 @@ case $secenek in
 		  su -c "cmd overlay disable com.android.internal.display.cutout.emulation.zigafide"
           echo Done!
           clear
+          dnai
           ;;
         *)
 		  clear
-          echo Wrong choose!
-		  bash tool
+          echo ----------------
+          echo   Wrong choose!
+          echo ----------------
+          sleep 2
+		  dnai
 		  ;;
 esac
