@@ -1,0 +1,4 @@
+#!/system/bin/sh
+echo Removing dasiypack module....
+su -c "rm -rf /data/adb/modules/dasiypack*
+echo Done! (Reboot)
