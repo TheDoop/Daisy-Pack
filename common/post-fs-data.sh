@@ -7,3 +7,8 @@
 MODDIR=${0%/*}
 
 # This script will be executed in post-fs-data mode
+cmd overlay enable com.google.android.theme.pixel
+cmd overlay enable com.android.internal.display.cutout.emulation.zigafide
+
+setprop persist.camera.HAL3.enabled 1
+setprop persist.camera.eis.enabled 1

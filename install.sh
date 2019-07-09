@@ -25,10 +25,10 @@
 SKIPMOUNT=false
 
 # Set to true if you need to load system.prop
-PROPFILE=false
+PROPFILE=true
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=false
+POSTFSDATA=true
 
 # Set to true if you need late_start service script
 LATESTARTSERVICE=true
@@ -155,14 +155,15 @@ set_permissions() {
   # set_perm  $MODPATH/system/bin/app_process32   0     2000    0755      u:object_r:zygote_exec:s0
   # set_perm  $MODPATH/system/bin/dex2oat         0     2000    0755      u:object_r:dex2oat_exec:s0
   # set_perm  $MODPATH/system/lib/libart.so       0     0       0644
+  set_perm $MODPATH/system/bin/dnai 0 0 0755 0644
 }
 
 # You can add more functions to assist your custom script code
 #overlay enable
-su -c "cmd overlay enable com.google.android.theme.pixel"
-su -c "cmd overlay enable com.android.internal.display.cutout.emulation.zigafide"
+#su -c "cmd overlay enable com.google.android.theme.pixel"
+#su -c "cmd overlay enable com.android.internal.display.cutout.emulation.zigafide"
 #camera2api
-su -c "setprop persist.camera.HAL3.enabled 1"
-su -c "setprop persist.camera.eis.enabled 1"
+#su -c "setprop persist.camera.HAL3.enabled 1"
+#su -c "setprop persist.camera.eis.enabled 1"
 #perm
-su -c "chmod +x usr"
+#su -c "chmod +x /system/bin/dnai"
