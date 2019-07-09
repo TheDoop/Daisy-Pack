@@ -153,7 +153,9 @@ set_permissions() {
 }
 
 # You can add more functions to assist your custom script code
+#overlay enable
 su -c "cmd overlay enable com.google.android.theme.pixel"
 su -c "cmd overlay enable com.android.internal.display.cutout.emulation.zigafide"
+#camera2api
 su -c "setprop persist.camera.HAL3.enabled 1"
 su -c "setprop persist.camera.eis.enabled 1"
