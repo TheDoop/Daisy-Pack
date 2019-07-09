@@ -1,4 +1,5 @@
 # All in one Dasiy Pack
+(Custom Roms or Stock Roms)
 ### - MIUI Cameara:
  - 4k video recording
  - 4, 8, 16, 32/s long exposure
