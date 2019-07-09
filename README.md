@@ -1,5 +1,8 @@
 # All in one Dasiy Pack
-(Custom Roms or Stock Roms)
+(for Custom Roms and Stock Roms)
+
+#### Type "dnai" on terminal emulator or adb shell to use
+
 ### - MIUI Cameara:
  - 4k video recording
  - 4, 8, 16, 32/s long exposure
@@ -12,4 +15,3 @@
 - Notch Killer
 - Network activty indicator disabler
 
-#### type "dnai" on terminal emulator or adb shell to use
