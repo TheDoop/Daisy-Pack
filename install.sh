@@ -28,7 +28,7 @@ SKIPMOUNT=false
 PROPFILE=true
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=true
+POSTFSDATA=false
 
 # Set to true if you need late_start service script
 LATESTARTSERVICE=true
@@ -124,6 +124,7 @@ REPLACE="
 print_modname() {
   ui_print "--------------------------------"
   ui_print "   Mi A2 lite all-in-One pack  "
+  ui_print "Type 'dnai' on terminal emulator"
   ui_print "--------------------------------"
 }
 
@@ -133,11 +134,17 @@ on_install() {
   # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
   # Extend/change the logic to whatever you want
   ui_print " - Extracting module files"
+  sleep 1
   ui_print " - Extracting MIUI Camera"
+  sleep 1
   ui_print " - Extracting dual speakerMOD"
+  sleep 1
   ui_print " - Extracting Pixel Theme"
+  sleep 1
   ui_print " - Extracting Pixel sounds"
+  sleep 1
   ui_print " - Extracting Pixel bootanimation"
+  sleep 1
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 }
 
