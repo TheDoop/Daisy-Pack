@@ -6,6 +6,8 @@ echo    "3. Enable Network acitivity indicators"
 echo    "4. disable Network acitivity indicators"
 echo    "5. Enable Notch Killer"
 echo    "6. Disable Notch Killer "
+echo    "7  Reload SystemUI"
+echo    "8  Exit"
 echo    "-------------------------------------------"
 echo    "---------------------------------"
 echo               "Enter choose : "
@@ -47,7 +49,7 @@ case $secenek in
         5)
 		  clear
           echo Enabling Notch Killer...
-		  su -c "cmd overlay disable com.keypressure.disable_network_activity_indicator"
+		  su -c "cmd overlay enable com.android.internal.display.cutout.emulation.zigafide"
           echo Done!
           clear
           dnai
@@ -60,12 +62,26 @@ case $secenek in
           clear
           dnai
           ;;
+        7)
+		  clear
+          echo Reloading SystemUI...
+          su -c "service call activity 42 s16 com.android.systemui"
+          su -c "am startservice -n com.android.systemui/.SystemUIService"
+          echo Done!
+          clear
+          dnai
+          ;;
+        8)
+		  clear
+          exit
+          ;;
         *)
 		  clear
           echo ----------------
           echo   Wrong choose!
           echo ----------------
           sleep 2
+          clear
 		  dnai
 		  ;;
 esac
