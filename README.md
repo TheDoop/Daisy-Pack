@@ -14,4 +14,5 @@
 - Black UI theme
 - Notch Killer
 - Network activty indicator disabler
+- Google Camera Fix (For some custom Roms)
 
